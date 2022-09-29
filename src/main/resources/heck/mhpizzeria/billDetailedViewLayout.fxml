@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heck.mhpizzeria.gui.BillDetailedViewController">
+    <children>
+        <Label text="Detailansicht Rechnung" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Label>
+        <HBox>
+            <children>
+                <Label minWidth="100.0" prefWidth="100.0" text="Name">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+            <Label fx:id="lblName" layoutX="10.0" layoutY="10.0" minWidth="400.0" prefWidth="400.0" text="&gt;Keine Name&lt;" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox>
+            <children>
+                <Label minWidth="100.0" prefWidth="100.0" text="Tischnummer">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+            <Label fx:id="lblTableNumber" layoutX="10.0" layoutY="10.0" minWidth="400.0" prefWidth="400.0" text="&gt;Kein Tisch ausgewählt&lt;" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </HBox>
+      <HBox layoutX="40.0" layoutY="137.0">
+         <children>
+            <Label minWidth="100.0" prefWidth="100.0" text="Gesamtpreis">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblSum" layoutX="10.0" layoutY="10.0" minWidth="400.0" prefWidth="400.0" text="&gt;Kein  Gesamtpreis berechnet&lt;" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="137.0">
+         <children>
+            <Label prefWidth="100.0" text="Positionen">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblPositions" layoutX="72.0" layoutY="10.0" prefWidth="400.0" text="&gt;Keine Position&lt;" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+        <HBox alignment="TOP_RIGHT">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <children>
+                <Button mnemonicParsing="false" onAction="#deleteBill" text="Löschen">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="50.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            <Button layoutX="317.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToMasterView" text="Zurück">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

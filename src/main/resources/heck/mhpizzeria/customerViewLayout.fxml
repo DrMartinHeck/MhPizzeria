@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.7" minHeight="500.0" minWidth="500.0" prefHeight="150.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heck.mhpizzeria.gui.CustomerViewController">
+    <items>
+        <VBox alignment="TOP_CENTER" spacing="10.0">
+            <children>
+                <Label text="Kundenliste" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </Label>
+                <Separator prefWidth="200.0" />
+            <TableView fx:id="tableViewOfCustomer">
+              <columns>
+                <TableColumn fx:id="tableColumnOfName" minWidth="100.0" prefWidth="179.0" text="Name" />
+                <TableColumn fx:id="tableColumnOfTableNumber" minWidth="100.0" prefWidth="166.0" text="Tischnummer" />
+              </columns>
+            </TableView>
+                <Separator prefWidth="200.0" />
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         <Label text="Kundenverwaltung" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="45.0" />
+            </VBox.margin>
+         </Label>
+            <Button onAction="#goToNewCustomer" prefHeight="20.0" prefWidth="80.0" text="Erstellen" />
+         <Button layoutX="40.0" layoutY="247.0" onAction="#goToEditCustomer" prefHeight="20.0" prefWidth="80.0" text="Bearbeiten" />
+         <Separator prefWidth="200.0">
+            <VBox.margin>
+               <Insets top="100.0" />
+            </VBox.margin></Separator>
+         <Label fx:id="lblError">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Label>
+         <Button layoutX="43.0" layoutY="465.0" onAction="#goToMaster" prefHeight="20.0" prefWidth="80.0" text="Abbrechen" />
+         <Button layoutX="43.0" layoutY="258.0" onAction="#goToOrderItems" prefHeight="20.0" prefWidth="80.0" text="Weiter" />
+        </VBox>
+    </items>
+</SplitPane>

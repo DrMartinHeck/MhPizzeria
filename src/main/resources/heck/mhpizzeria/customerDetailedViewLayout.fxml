@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heck.mhpizzeria.gui.CustomerDetailedViewController">
+    <children>
+        <Label text="Detailansicht Kunde" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Label>
+        <HBox alignment="TOP_CENTER">
+            <children>
+                <Label prefWidth="100.0" text="Name">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="txtName" alignment="CENTER" prefWidth="250.0" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="TOP_CENTER">
+            <children>
+                <Label prefWidth="100.0" text="Tischnummer">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="txtTableNumber" alignment="CENTER" prefWidth="250.0" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </HBox>
+      <Label fx:id="lblError" />
+        <HBox alignment="TOP_RIGHT">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <children>
+                <Button mnemonicParsing="false" onAction="#goToCustomerView" text="Zurück">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="150.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteCustomer" text="Löschen">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#saveCustomer" text="Speichern">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

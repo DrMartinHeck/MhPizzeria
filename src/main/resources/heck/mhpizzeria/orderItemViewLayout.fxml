@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.7" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heck.mhpizzeria.gui.OrderItemViewController">
+    <items>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
+            <children>
+                <Label text="Pizzas" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Separator prefWidth="200.0" />
+            <TableView fx:id="tableViewOfOrderItem" minHeight="-Infinity" minWidth="-Infinity" prefWidth="350.0">
+              <columns>
+                <TableColumn fx:id="columnOfName" prefWidth="301.0" text="Name" />
+                <TableColumn fx:id="columnOfPrice" prefWidth="54.0" text="Preis" />
+                  <TableColumn fx:id="columnOfCount" prefWidth="50.0" text="Anzahl" />
+                  <TableColumn fx:id="columnOfPositionPrice" prefWidth="83.0" text="Positionspreis" />
+              </columns>
+            </TableView>
+                <Separator prefWidth="200.0" />
+            <HBox>
+               <children>
+                  <Label text="Gesamtpreis" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFinalPrice" layoutX="10.0" layoutY="10.0" minWidth="100.0" text="00.00" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         <Label text="Rechnung für" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="20.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="lblCustomer" layoutX="21.0" layoutY="208.0" text="&lt;gewählter Kunde&gt;" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </Label>
+         <Button layoutX="50.0" layoutY="200.0" onAction="#goToDetailedView" text="Anzahl ändern">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </Button>
+         <Label fx:id="txtCustomer1" layoutX="23.0" layoutY="70.0" text="... oder Doppelklick" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Button layoutX="39.0" layoutY="150.0" onAction="#setCountsZero" text="Alles auf Null">
+            <VBox.margin>
+               <Insets top="50.0" />
+            </VBox.margin></Button>
+         <Separator layoutX="20.0" layoutY="315.0" prefWidth="200.0" />
+         <Label fx:id="lblError" layoutX="32.0" layoutY="165.0" textAlignment="CENTER">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </Label>
+         <HBox alignment="TOP_CENTER">
+            <children>
+               <Button onAction="#goToCustomerView" text="zurück">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Button>
+                  <Button onAction="#saveBill" text="Speichern">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin></Button>
+            </children>
+            <VBox.margin>
+               <Insets top="50.0" />
+            </VBox.margin>
+         </HBox>
+         <Separator prefWidth="200.0" />
+        </VBox>
+    </items>
+</SplitPane>
